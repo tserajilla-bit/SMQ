@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth" style="--color-primary: #0a4d3c; --color-primary-dark: #001504; --color-secondary: #c59b27; --color-bg: #f8fafc; --font-ar: 'Tajawal'; --card-radius: 1rem; font-size: 16px;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMQ Manpower | مؤسسة إس إم كيو للاستقدام والحلول المهنية</title>
+    <meta name="description" content="شريككم الموثوق لاستقدام وتشغيل الكفاءات والكوادر المهنية في المملكة العربية السعودية.">
+    
+    <!-- Google Fonts: Cairo, Tajawal, IBM Plex Sans Arabic & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['var(--font-ar)', 'Inter', 'sans-serif'],
+                        en: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        saudi: {
+                            emerald: 'var(--color-primary)',
+                            dark: 'var(--color-primary-dark)',
+                            light: '#117A60',
+                            mint: '#E8F3F0'
+                        },
+                        gold: {
+                            DEFAULT: 'var(--color-secondary)',
+                            light: '#DFBE5C',
+                            dark: '#9B7819'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- JSZip for Exporting Complete Website Package (index.html + assets folder) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <style>
+        :root {
+            --color-primary: #0A4D3C;
+            --color-primary-dark: #063529;
+            --color-secondary: #C59B27;
+            --color-bg: #F8FAFC;
+            --font-ar: 'Cairo';
+            --card-radius: 1rem;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-ar), sans-serif;
+            background-color: var(--color-bg);
+            color: #1E293B;
+            overflow-x: hidden;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        /* Dark Mode Global Overrides */
+        html.dark body {
+            background-color: #070D19 !important;
+            color: #E2E8F0 !important;
+        }
+
+        html.dark .bg-white {
+            background-color: #111A2E !important;
+        }
+
+        html.dark .bg-slate-50 {
+            background-color: #0B1324 !important;
+        }
+
+        html.dark .bg-slate-100 {
+            background-color: #17233B !important;
+        }
+
+        html.dark .bg-saudi-mint {
+            background-color: rgba(16, 185, 129, 0.14) !important;
+        }
+
+        html.dark .text-saudi-emerald {
+            color: #34D399 !important;
+        }
+
+        html.dark .bg-saudi-emerald .text-saudi-emerald,
+        html.dark .bg-saudi-dark .text-saudi-emerald {
+            color: var(--color-primary) !important;
+        }
+
+        html.dark h1, html.dark h2, html.dark h3, html.dark h4,
+        html.dark .text-slate-900, html.dark .text-slate-800 {
+            color: #F8FAFC !important;
+        }
+
+        html.dark .bg-white.text-slate-900,
+        html.dark button.bg-white {
+            background-color: #F8FAFC !important;
+            color: #0F172A !important;
+        }
+
+        html.dark .text-slate-700, html.dark .text-slate-600 {
+            color: #CBD5E1 !important;
+        }
+
+        html.dark .text-slate-500 {
+            color: #94A3B8 !important;
+        }
+
+        html.dark .border-slate-200, html.dark .border-slate-100 {
+            border-color: #26354F !important;
+        }
+
+        html.dark input, html.dark select {
+            background-color: #0B1324 !important;
+            color: #F8FAFC !important;
+            border-color: #334155 !important;
+        }
+
+        html[dir="ltr"] body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .custom-card {
+            border-radius: var(--card-radius);
+        }
+
+        .saudi-pattern-bg {
+            background-color: var(--color-primary-dark);
+            background-image: radial-gradient(rgba(197, 155, 39, 0.14) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.05) 1px, var(--color-primary-dark) 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(10, 77, 60, 0.16);
+        }
+        html.dark .card-hover:hover {
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.65);
+        }
+
+        .visual-edit-mode [data-i18n],
+        .visual-edit-mode [data-editable] {
+            outline: 2px dashed #C59B27;
+            outline-offset: 3px;
+            cursor: text;
+            border-radius: 4px;
+            transition: outline-color 0.2s;
+        }
+        .visual-edit-mode [data-i18n]:focus,
+        .visual-edit-mode [data-editable]:focus {
+            outline: 2px solid #10B981;
+            background-color: rgba(197, 155, 39, 0.12);
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            70% { transform: scale(1.3); opacity: 0; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+        .wa-pulse::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #25D366;
+            z-index: -1;
+            animation: pulse-ring 2s infinite;
+        }
+
+        /* Scroll Progress Bar */
+        #scrollProgress {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-secondary), #10B981);
+            z-index: 60;
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+        html[dir="ltr"] #scrollProgress {
+            right: auto;
+            left: 0;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:var(--font-ar), Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-24{bottom:6rem}.bottom-6{bottom:1.5rem}.left-0{left:0px}.left-6{left:1.5rem}.top-0{top:0px}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.-mt-10{margin-top:-2.5rem}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-10{margin-bottom:2.5rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-20{height:5rem}.h-3\.5{height:0.875rem}.h-32{height:8rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-9{height:2.25rem}.h-full{height:100%}.max-h-\[60vh\]{max-height:60vh}.min-h-\[320px\]{min-height:320px}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-3\.5{width:0.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-9{width:2.25rem}.w-full{width:100%}.w-auto{width:auto}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[120px\]{max-width:120px}.max-w-\[140px\]{max-width:140px}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-br-full{border-bottom-right-radius:9999px}.border{border-width:1px}.border-0{border-width:0px}.border-2{border-width:2px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-slate-800\/80{border-color:rgb(30 41 59 / 0.8)}.border-white\/25{border-color:rgb(255 255 255 / 0.25)}.bg-\[\#0A4D3C\]{--tw-bg-opacity:1;background-color:rgb(10 77 60 / var(--tw-bg-opacity, 1))}.bg-\[\#18181B\]{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-\[\#1E3A8A\]{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-\[\#25D366\]{--tw-bg-opacity:1;background-color:rgb(37 211 102 / var(--tw-bg-opacity, 1))}.bg-amber-100\/80{background-color:rgb(254 243 199 / 0.8)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-gold{background-color:var(--color-secondary)}.bg-saudi-emerald{background-color:var(--color-primary)}.bg-saudi-mint{--tw-bg-opacity:1;background-color:rgb(232 243 240 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-slate-950\/70{background-color:rgb(2 6 23 / 0.7)}.bg-slate-950\/75{background-color:rgb(2 6 23 / 0.75)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.fill-white{fill:#fff}.object-contain{object-fit:contain}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-1{padding:0.25rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-10{padding-bottom:2.5rem}.pb-12{padding-bottom:3rem}.pb-2{padding-bottom:0.5rem}.pb-3{padding-bottom:0.75rem}.pb-5{padding-bottom:1.25rem}.pt-1{padding-top:0.25rem}.pt-16{padding-top:4rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.\!text-white{--tw-text-opacity:1 !important;color:rgb(255 255 255 / var(--tw-text-opacity, 1)) !important}.text-\[\#25D366\]{--tw-text-opacity:1;color:rgb(37 211 102 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-gold{color:var(--color-secondary)}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-saudi-emerald{color:var(--color-primary)}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.accent-emerald-700{accent-color:#047857}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-saudi-emerald *::selection{background-color:var(--color-primary)}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-saudi-emerald::selection{background-color:var(--color-primary)}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.file\:mr-2::file-selector-button{margin-right:0.5rem}.file\:rounded-lg::file-selector-button{border-radius:0.5rem}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-saudi-emerald::file-selector-button{background-color:var(--color-primary)}.file\:bg-slate-800::file-selector-button{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.file\:px-3::file-selector-button{padding-left:0.75rem;padding-right:0.75rem}.file\:py-1\.5::file-selector-button{padding-top:0.375rem;padding-bottom:0.375rem}.file\:text-xs::file-selector-button{font-size:0.75rem;line-height:1rem}.file\:font-bold::file-selector-button{font-weight:700}.file\:text-white::file-selector-button{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:-translate-y-0\.5:hover{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-gold:hover{border-color:var(--color-secondary)}.hover\:border-saudi-emerald:hover{border-color:var(--color-primary)}.hover\:border-slate-400:hover{--tw-border-opacity:1;border-color:rgb(148 163 184 / var(--tw-border-opacity, 1))}.hover\:bg-\[\#20bd5a\]:hover{--tw-bg-opacity:1;background-color:rgb(32 189 90 / var(--tw-bg-opacity, 1))}.hover\:bg-gold-light:hover{--tw-bg-opacity:1;background-color:rgb(223 190 92 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-saudi-dark:hover{background-color:var(--color-primary-dark)}.hover\:bg-saudi-emerald:hover{background-color:var(--color-primary)}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/20:hover{background-color:rgb(255 255 255 / 0.2)}.hover\:text-gold:hover{color:var(--color-secondary)}.hover\:text-saudi-emerald:hover{color:var(--color-primary)}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.hover\:text-slate-800:hover{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:file\:bg-saudi-dark::file-selector-button:hover{background-color:var(--color-primary-dark)}.hover\:file\:bg-slate-700::file-selector-button:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-saudi-emerald:focus{--tw-ring-color:var(--color-primary)}.dark\:block:is(.dark *){display:block}.dark\:hidden:is(.dark *){display:none}.dark\:border-slate-700:is(.dark *){--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.dark\:border-slate-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.dark\:bg-amber-500\/20:is(.dark *){background-color:rgb(245 158 11 / 0.2)}.dark\:bg-gold:is(.dark *){background-color:var(--color-secondary)}.dark\:bg-slate-700:is(.dark *){--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.dark\:bg-slate-800:is(.dark *){--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.dark\:bg-slate-900:is(.dark *){--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.dark\:text-amber-300:is(.dark *){--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.dark\:text-slate-200:is(.dark *){--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.dark\:text-slate-950:is(.dark *){--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.dark\:hover\:bg-gold-light:hover:is(.dark *){--tw-bg-opacity:1;background-color:rgb(223 190 92 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:col-span-2{grid-column:span 2 / span 2}.sm\:inline-flex{display:inline-flex}.sm\:w-auto{width:auto}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:p-14{padding:3.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-24{padding-top:6rem;padding-bottom:6rem}.sm\:py-28{padding-top:7rem;padding-bottom:7rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 768px){.md\:col-span-3{grid-column:span 3 / span 3}.md\:col-span-4{grid-column:span 4 / span 4}.md\:col-span-5{grid-column:span 5 / span 5}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-6xl{font-size:3.75rem;line-height:1}}</style></head>
+<body class="antialiased selection:bg-saudi-emerald selection:text-white">
+
+    <!-- Scroll Reading Progress Bar -->
+    <div id="scrollProgress" style="width: 8.9955%;"></div>
+
+    <!-- ========================================== -->
+    <!-- QUICK ADMIN CUSTOMIZATION BAR              -->
+    <!-- ========================================== -->
+    
+
+    <!-- ========================================== -->
+    <!-- HEADER / NAVIGATION BAR                    -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div id="headerLogoContainer" class="h-12 w-auto max-w-[140px] rounded-lg flex items-center justify-center overflow-hidden bg-white p-1 border border-slate-200 shadow-sm"><img src="assets/logo.jpg" alt="Logo" class="h-full w-auto object-contain"></div>
+                    <div>
+                        <div id="headerBrandName" class="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight leading-none">SMQ Manpower</div>
+                        <div id="headerBrandSub" class="text-[11px] sm:text-xs text-slate-500 font-medium mt-1" data-i18n="brandSubtitle">مؤسسة إس إم كيو للاستقدام</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-slate-700">
+                    <a href="#portals" data-nav-section="portals" data-i18n="navPortals" class="hover:text-saudi-emerald transition">استمارات التسجيل</a>
+                    <a href="#about" data-nav-section="about" data-i18n="navAbout" class="hover:text-saudi-emerald transition">عن المؤسسة</a>
+                    <a href="#sectors" data-nav-section="sectors" data-i18n="navSectors" class="hover:text-saudi-emerald transition">القطاعات والتخصصات</a>
+                    <a href="#steps" data-nav-section="steps" data-i18n="navSteps" class="hover:text-saudi-emerald transition">خطوات العمل</a>
+                </nav>
+
+                <!-- Action Controls -->
+                <div class="flex items-center gap-2.5">
+                    <!-- Language Switcher Icon Button -->
+                    <button type="button" onclick="toggleLanguage()" aria-label="Switch Language" title="تغيير اللغة / Switch Language" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="languages" aria-hidden="true" class="lucide lucide-languages w-5 h-5"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+                    </button>
+
+                    <!-- Dark Mode Toggle Icon Button -->
+                    <button type="button" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" title="الوضع الليلي / النهاري" class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition border border-slate-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="moon" aria-hidden="true" class="lucide lucide-moon w-5 h-5 dark:hidden"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun w-5 h-5 hidden dark:block text-amber-400"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                    </button>
+
+                    <!-- Primary Header CTA -->
+                    <a href="#portals" data-i18n="navStartBtn" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-saudi-emerald hover:bg-saudi-dark text-white text-sm font-bold shadow-md transition">ابدأ الطلب الآن</a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button type="button" onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-5 h-5"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 pt-3 pb-5 space-y-2.5 shadow-lg">
+            <a href="#portals" onclick="toggleMobileMenu()" data-nav-section="portals" data-i18n="navPortals" class="block py-2 px-3 rounded-lg font-bold text-slate-700 hover:bg-slate-100">استمارات التسجيل</a>
+            <a href="#about" onclick="toggleMobileMenu()" data-nav-section="about" data-i18n="navAbout" class="block py-2 px-3 rounded-lg font-bold text-slate-700 hover:bg-slate-100">عن المؤسسة</a>
+            <a href="#sectors" onclick="toggleMobileMenu()" data-nav-section="sectors" data-i18n="navSectors" class="block py-2 px-3 rounded-lg font-bold text-slate-700 hover:bg-slate-100">القطاعات والتخصصات</a>
+            <a href="#steps" onclick="toggleMobileMenu()" data-nav-section="steps" data-i18n="navSteps" class="block py-2 px-3 rounded-lg font-bold text-slate-700 hover:bg-slate-100">خطوات العمل</a>
+            <a href="#portals" onclick="toggleMobileMenu()" data-i18n="mobileStartBtn" class="block text-center py-2.5 px-4 rounded-xl bg-saudi-emerald text-white font-bold mt-2">اختر بوابة التسجيل</a>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <section id="heroSection" class="relative saudi-pattern-bg text-white py-20 sm:py-28 overflow-hidden">
+        <!-- Optional Dark Overlay when Custom Background Image is Uploaded -->
+        <div id="heroImageOverlay" class="hidden absolute inset-0 bg-slate-950/75 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-gold/40 text-gold text-xs sm:text-sm font-bold mb-6 backdrop-blur-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                <span data-i18n="heroBadge">حلول استقدام وتوظيف معتمدة في المملكة العربية السعودية</span>
+            </div>
+
+            <h1 data-i18n="heroTitle" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6 !text-white">نربط منشآتكم بأفضل <span class="text-gold">الكوادر والكفاءات المهنية</span> الموثوقة</h1>
+
+            <p data-i18n="heroSubtitle" class="text-base sm:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed mb-10">في <strong class="text-white">مؤسسة إس إم كيو (SMQ Manpower)</strong>، نقدم حلول استقدام وتشغيل متكاملة تضمن للشركات السعودية سرعة الإنجاز وجودة الاختيار، وتفتح للكوادر المهنية آفاقاً وظيفية آمنة ومتميزة.</p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#portals" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gold hover:bg-gold-light text-slate-950 font-extrabold text-base shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2 w-5 h-5"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
+                    <span data-i18n="heroCtaEst">طلب كوادر للمنشآت</span>
+                </a>
+                <a href="#portals" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/25 font-bold text-base backdrop-blur-sm transition flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" aria-hidden="true" class="lucide lucide-user-check w-5 h-5 text-gold"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                    <span data-i18n="heroCtaCand">تسجيل المرشحين والعمال</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TRUST & STATS BAR                          -->
+    <!-- ========================================== -->
+    <section id="statsSection" class="relative z-20 -mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white custom-card shadow-xl border border-slate-200/80 p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <div class="p-2">
+                <div data-i18n="stat1Val" class="text-2xl sm:text-3xl font-extrabold text-saudi-emerald mb-1">100%</div>
+                <div data-i18n="stat1Label" class="text-xs sm:text-sm font-semibold text-slate-600">التزام بالأنظمة السعودية</div>
+            </div>
+            <div class="p-2">
+                <div data-i18n="stat2Val" class="text-2xl sm:text-3xl font-extrabold text-saudi-emerald mb-1">+4 قطاعات</div>
+                <div data-i18n="stat2Label" class="text-xs sm:text-sm font-semibold text-slate-600">طبية، ضيافة، فنية، وتشغيل</div>
+            </div>
+            <div class="p-2">
+                <div data-i18n="stat3Val" class="text-2xl sm:text-3xl font-extrabold text-saudi-emerald mb-1">فحص دقيق</div>
+                <div data-i18n="stat3Label" class="text-xs sm:text-sm font-semibold text-slate-600">تدقيق السير الذاتية والمهارات</div>
+            </div>
+            <div class="p-2">
+                <div data-i18n="stat4Val" class="text-2xl sm:text-3xl font-extrabold text-saudi-emerald mb-1">دعم مستمر</div>
+                <div data-i18n="stat4Label" class="text-xs sm:text-sm font-semibold text-slate-600">متابعة قبل وبعد الاستقدام</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- DUAL-TARGET PORTALS (B2B & B2C)            -->
+    <!-- ========================================== -->
+    <section id="portals" class="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span data-i18n="portalsBadge" class="inline-block px-3.5 py-1 rounded-full bg-saudi-mint text-saudi-emerald text-xs font-extrabold mb-3">بوابات التقديم المباشر</span>
+            <h2 data-i18n="portalsTitle" class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4">اختر المسار المناسب لاحتياجك</h2>
+            <p data-i18n="portalsSubtitle" class="text-slate-600 text-sm sm:text-base">صممنا تجربة تسجيل ميسرة وسريعة لكل من أصحاب الأعمال والباحثين عن فرص عمل مهنية في المملكة.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <!-- Card 1: Establishments / Companies (B2B) -->
+            <div class="bg-white custom-card border-2 border-saudi-emerald/20 hover:border-saudi-emerald p-8 sm:p-10 shadow-lg card-hover flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-saudi-emerald/5 rounded-br-full pointer-events-none"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span data-i18n="cardEstTag" class="px-3 py-1 rounded-lg bg-saudi-mint text-saudi-emerald text-xs font-extrabold">قطاع الأعمال (B2B)</span>
+                        <div class="w-12 h-12 rounded-xl bg-saudi-emerald text-gold flex items-center justify-center shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building-2" aria-hidden="true" class="lucide lucide-building-2 w-6 h-6"><path d="M10 12h4"></path><path d="M10 8h4"></path><path d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
+                        </div>
+                    </div>
+                    <h3 data-i18n="cardEstTitle" class="text-2xl font-extrabold text-slate-900 mb-3">للمنشآت والشركات</h3>
+                    <p data-i18n="cardEstDesc" class="text-slate-600 text-sm leading-relaxed mb-6">هل تبحث عن كوادر مهنية مدربة ومؤهلة لتعزيز فريق عملك؟ سجل طلب منشأتك الآن وسيتواصل معك مستشارونا لتوفير المرشحين الأنسب.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-saudi-emerald shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardEstItem1">توفير كفاءات طبية، فنية، ضيافة، وخدمات مساندة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-saudi-emerald shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardEstItem2">فلترة ومقابلات أولية دقيقة قبل ترشيح السير الذاتية.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-saudi-emerald shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardEstItem3">سرعة في إنهاء الإجراءات والتنسيق اللوجستي.</span>
+                        </li>
+                    </ul>
+                </div>
+                <a id="btnEstablishmentForm" href="https://docs.google.com/forms/d/e/1FAIpQLSfY3ile8LdcPOHHpB4PRFfREpKmjLW2WFL9Y5RN3j3nHsDIiQ/viewform?usp=dialog" target="_blank" rel="noopener" class="w-full py-4 px-6 rounded-xl bg-saudi-emerald hover:bg-saudi-dark text-white font-extrabold text-center shadow-lg transition flex items-center justify-center gap-2">
+                    <span data-i18n="cardEstBtn">استمارة طلب عمالة للمنشآت</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-left" aria-hidden="true" class="lucide lucide-arrow-up-left w-5 h-5"><path d="M7 17V7h10"></path><path d="M17 17 7 7"></path></svg>
+                </a>
+            </div>
+
+            <!-- Card 2: Candidates / Workers (B2C) -->
+            <div class="bg-white custom-card border-2 border-gold/30 hover:border-gold p-8 sm:p-10 shadow-lg card-hover flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-gold/10 rounded-br-full pointer-events-none"></div>
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span data-i18n="cardCandTag" class="px-3 py-1 rounded-lg bg-amber-100/80 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 text-xs font-extrabold">للكوادر والمرشحين</span>
+                        <div class="w-12 h-12 rounded-xl bg-gold text-slate-950 flex items-center justify-center shadow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" aria-hidden="true" class="lucide lucide-user-check w-6 h-6"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                        </div>
+                    </div>
+                    <h3 data-i18n="cardCandTitle" class="text-2xl font-extrabold text-slate-900 mb-3">تسجيل المرشحين والكفاءات</h3>
+                    <p data-i18n="cardCandDesc" class="text-slate-600 text-sm leading-relaxed mb-6">انضم إلى قاعدة بيانات المرشحين المعتمدة لدى SMQ Manpower للعمل لدى كبرى الشركات والمؤسسات في المملكة العربية السعودية.</p>
+                    <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-gold shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardCandItem1">فرص عمل موثوقة بعقود واضحة وحقوق محفوظة.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-gold shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardCandItem2">توجيه مباشر للوظائف المناسبة لمؤهلاتك وخبراتك.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-5 h-5 text-gold shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg>
+                            <span data-i18n="cardCandItem3">متابعة مستمرة وإرشاد كامل حتى استلام العمل.</span>
+                        </li>
+                    </ul>
+                </div>
+                <a id="btnCandidateForm" href="https://docs.google.com/forms/d/e/1FAIpQLSf-M1w1LRoJdyGNxAzNohiA6Ol_UWtT0ek_UMfQxT4c4SdcUQ/viewform?usp=dialog" target="_blank" rel="noopener" class="w-full py-4 px-6 rounded-xl bg-slate-900 dark:bg-gold hover:bg-slate-800 dark:hover:bg-gold-light text-white dark:text-slate-950 font-extrabold text-center shadow-lg transition flex items-center justify-center gap-2">
+                    <span data-i18n="cardCandBtn">استمارة تسجيل المرشحين</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-left" aria-hidden="true" class="lucide lucide-arrow-up-left w-5 h-5"><path d="M7 17V7h10"></path><path d="M17 17 7 7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- ABOUT SECTION                              -->
+    <!-- ========================================== -->
+    <section id="about" class="py-20 bg-white border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Visual Official Card -->
+            <div class="lg:col-span-5">
+                <div class="saudi-pattern-bg custom-card p-8 sm:p-10 text-white shadow-2xl border border-gold/30 relative overflow-hidden min-h-[320px] flex flex-col justify-between">
+                    <div class="flex items-start justify-between">
+                        <div class="text-xs font-mono tracking-widest text-slate-300 uppercase">
+                            <div id="aboutCardTop1" data-editable="">OFFICIAL REGISTRATION</div>
+                            <div id="aboutCardTop2" data-editable="" class="text-gold font-bold mt-0.5">SAUDI ARABIA</div>
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-white/10 border border-gold/40 flex items-center justify-center text-gold font-black text-base">
+                            <span id="aboutCardLogoText" data-editable="">SMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-16">
+                        <div id="aboutCardBadge" data-editable="" class="text-xs font-bold tracking-wider text-gold uppercase mb-2">EXCELLENCE &amp; COMMITMENT</div>
+                        <div id="aboutCardMainTitle" data-editable="" class="text-2xl sm:text-3xl font-extrabold leading-snug !text-white">
+                                    الريادة في حلول الاستقدام والتوظيف
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Copy -->
+            <div class="lg:col-span-7">
+                <span data-i18n="aboutBadge" class="inline-block px-3.5 py-1 rounded-full bg-saudi-mint text-saudi-emerald text-xs font-extrabold mb-3">عن مؤسسة إس إم كيو SMQ Manpower</span>
+                <h2 data-i18n="aboutTitle" class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-5">نصنع الفارق في إدارة الموارد البشرية وتوفير الكوادر المتميزة</h2>
+                <p data-i18n="aboutDesc" class="text-slate-600 text-base leading-relaxed mb-8">تُعد <strong>مؤسسة إس إم كيو (SMQ Manpower)</strong> إحدى الجهات المتخصصة في تقديم حلول الاستقدام والتشغيل الشاملة للمنشآت والشركات في المملكة العربية السعودية. نتميز بالدقة العالية في اختيار وتدقيق السير الذاتية للعمالة الفلبينية والدولية، مما يضمن تلبية الاحتياجات التشغيلية بأعلى معايير الكفاءة والاحترافية.</p>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-saudi-emerald text-white flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-5 h-5"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 data-i18n="aboutFeat1Title" class="font-extrabold text-slate-900 text-sm mb-1">سرعة في التنفيذ</h4>
+                            <p data-i18n="aboutFeat1Desc" class="text-xs text-slate-600">إجراءات منظمة تختصر الوقت على المنشأة</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-gold text-slate-950 flex items-center justify-center shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" aria-hidden="true" class="lucide lucide-award w-5 h-5"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                        </div>
+                        <div>
+                            <h4 data-i18n="aboutFeat2Title" class="font-extrabold text-slate-900 text-sm mb-1">دقة الاختيار</h4>
+                            <p data-i18n="aboutFeat2Desc" class="text-xs text-slate-600">اختبار وتقييم مهني للمرشح قبل الاعتماد</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTORS & SPECIALTIES                      -->
+    <!-- ========================================== -->
+    <section id="sectors" class="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span data-i18n="sectorsBadge" class="inline-block px-3.5 py-1 rounded-full bg-saudi-mint text-saudi-emerald text-xs font-extrabold mb-3">تغطية شاملة لقطاعات السوق السعودي</span>
+            <h2 data-i18n="sectorsTitle" class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-4">القطاعات والتخصصات التي نخدمها</h2>
+            <p data-i18n="sectorsSubtitle" class="text-slate-600 text-sm sm:text-base">نوفر كفاءات متخصصة ومدربة بعناية لتلبية متطلبات القطاعات الحيوية في المملكة.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white custom-card p-6 border border-slate-200/80 shadow-sm card-hover">
+                <div class="w-12 h-12 rounded-xl bg-saudi-mint text-saudi-emerald flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="stethoscope" aria-hidden="true" class="lucide lucide-stethoscope w-6 h-6"><path d="M11 2v2"></path><path d="M5 2v2"></path><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"></path><path d="M8 15a6 6 0 0 0 12 0v-3"></path><circle cx="20" cy="10" r="2"></circle></svg>
+                </div>
+                <h3 data-i18n="sec1Title" class="font-extrabold text-lg text-slate-900 mb-2">القطاع الصحي والطبي</h3>
+                <p data-i18n="sec1Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">تمريض، فنيو مختبرات، أخصائيو علاج طبيعي، وكوادر مساندة للمستشفيات والمجمعات الطبية.</p>
+            </div>
+
+            <div class="bg-white custom-card p-6 border border-slate-200/80 shadow-sm card-hover">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/80 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="utensils" aria-hidden="true" class="lucide lucide-utensils w-6 h-6"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                </div>
+                <h3 data-i18n="sec2Title" class="font-extrabold text-lg text-slate-900 mb-2">الضيافة والفنادق</h3>
+                <p data-i18n="sec2Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">طهاة محترفون، مقدمو طعام، باريستا، وموظفو استقبال وخدمات فندقية راقية.</p>
+            </div>
+
+            <div class="bg-white custom-card p-6 border border-slate-200/80 shadow-sm card-hover">
+                <div class="w-12 h-12 rounded-xl bg-saudi-mint text-saudi-emerald flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wrench" aria-hidden="true" class="lucide lucide-wrench w-6 h-6"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path></svg>
+                </div>
+                <h3 data-i18n="sec3Title" class="font-extrabold text-lg text-slate-900 mb-2">التشغيل والصيانة الفنية</h3>
+                <p data-i18n="sec3Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">فنيو كهرباء وتكييف، ميكانيكا، صيانة مباني، ومشغلو معدات ومصانع بخبرات معتمدة.</p>
+            </div>
+
+            <div class="bg-white custom-card p-6 border border-slate-200/80 shadow-sm card-hover">
+                <div class="w-12 h-12 rounded-xl bg-amber-100/80 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 flex items-center justify-center mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" aria-hidden="true" class="lucide lucide-briefcase w-6 h-6"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                </div>
+                <h3 data-i18n="sec4Title" class="font-extrabold text-lg text-slate-900 mb-2">الخدمات المساندة والتجزئة</h3>
+                <p data-i18n="sec4Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">موظفو مبيعات، خدمة عملاء، سائقون، وكوادر لوجستية وإدارية لقطاع التجزئة والشركات.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- HOW IT WORKS (4 STEPS)                     -->
+    <!-- ========================================== -->
+    <section id="steps" class="py-20 bg-white border-t border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span data-i18n="stepsBadge" class="inline-block px-3.5 py-1 rounded-full bg-saudi-mint text-saudi-emerald text-xs font-extrabold mb-3">آلية عمل واضحة ومنظمة</span>
+                <h2 data-i18n="stepsTitle" class="text-2xl sm:text-4xl font-extrabold text-slate-900">كيف نعمل في SMQ Manpower؟</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+                    <div class="w-10 h-10 rounded-full bg-saudi-emerald text-white font-extrabold flex items-center justify-center mb-4">1</div>
+                    <h3 data-i18n="step1Title" class="font-extrabold text-lg text-slate-900 mb-2">تعبئة الاستمارة</h3>
+                    <p data-i18n="step1Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">تقديم طلب المنشأة أو تسجيل بيانات المرشح إلكترونياً خلال دقائق.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+                    <div class="w-10 h-10 rounded-full bg-saudi-emerald text-white font-extrabold flex items-center justify-center mb-4">2</div>
+                    <h3 data-i18n="step2Title" class="font-extrabold text-lg text-slate-900 mb-2">المراجعة والتدقيق</h3>
+                    <p data-i18n="step2Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">فرز الطلبات ومطابقة المؤهلات والخبرات مع اشتراطات العمل.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+                    <div class="w-10 h-10 rounded-full bg-saudi-emerald text-white font-extrabold flex items-center justify-center mb-4">3</div>
+                    <h3 data-i18n="step3Title" class="font-extrabold text-lg text-slate-900 mb-2">المقابلة والاعتماد</h3>
+                    <p data-i18n="step3Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">تنسيق المقابلات الشخصية واعتماد المرشحين الأنسب للمنشأة.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 relative">
+                    <div class="w-10 h-10 rounded-full bg-gold text-slate-950 font-extrabold flex items-center justify-center mb-4">4</div>
+                    <h3 data-i18n="step4Title" class="font-extrabold text-lg text-slate-900 mb-2">الاستقدام والمباشرة</h3>
+                    <p data-i18n="step4Desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed">إنهاء إجراءات التأشيرة والسفر وضمان مباشرة العمل بسلاسة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- DIRECT CTA BANNER                          -->
+    <!-- ========================================== -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto saudi-pattern-bg custom-card p-8 sm:p-14 text-center text-white shadow-2xl border border-gold/30">
+            <h2 data-i18n="ctaTitle" class="text-2xl sm:text-4xl font-extrabold mb-4 !text-white">هل لديك استفسار مباشر أو طلب عاجل؟</h2>
+            <p data-i18n="ctaSubtitle" class="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto mb-8">فريق خدمة العملاء والاستقدام لدينا جاهز للرد على استفسارات المنشآت والمرشحين عبر الواتساب أو البريد الرسمي.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a id="ctaWhatsappBtn" href="https://wa.me/963994927073?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20SMQ%20Manpower%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%AF%D8%A7%D9%85%20%D9%88%D8%A7%D9%84%D8%AA%D9%88%D8%B8%D9%8A%D9%81." target="_blank" rel="noopener" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold shadow-lg transition flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-5 h-5"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+                    <span data-i18n="ctaWaBtn">تواصل معنا عبر واتساب</span>
+                </a>
+                <a href="#portals" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-extrabold shadow-lg transition flex items-center justify-center gap-2">
+                    <span data-i18n="ctaFormsBtn">الانتقال إلى استمارات التسجيل</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="bg-slate-950 text-slate-300 pt-16 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-10 pb-12 border-b border-slate-800/80">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3 mb-4">
+                    <div id="footerLogoContainer" class="h-10 w-auto max-w-[120px] rounded-lg flex items-center justify-center overflow-hidden bg-white p-1"><img src="assets/logo.jpg" alt="Logo" class="h-full w-auto object-contain"></div>
+                    <span id="footerBrandName" class="font-extrabold text-xl text-white">SMQ Manpower</span>
+                </div>
+                <p data-i18n="footerDesc" class="text-sm text-slate-400 leading-relaxed mb-4">مؤسسة إس إم كيو للاستقدام والحلول المهنية - نربط قطاع الأعمال بالكوادر العالمية المؤهلة وفق أعلى المعايير.</p>
+                <div class="flex items-center gap-2 text-xs text-gold font-semibold mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-4 h-4 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span data-i18n="footerCoverage">المملكة العربية السعودية | تغطية شاملة (الرياض، جدة، الدمام، وكافة المناطق)</span>
+                </div>
+                <div id="footerSocialLinks" class="flex items-center gap-2.5">
+                <a href="تتت" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-saudi-emerald text-slate-300 hover:text-white flex items-center justify-center transition transform hover:-translate-y-0.5">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            
+                <a href="ggggggg" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-saudi-emerald text-slate-300 hover:text-white flex items-center justify-center transition transform hover:-translate-y-0.5">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            
+                <a href="ggg" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-saudi-emerald text-slate-300 hover:text-white flex items-center justify-center transition transform hover:-translate-y-0.5">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                </a>
+            </div>
+            </div>
+
+            <div class="md:col-span-4">
+                <h4 data-i18n="footerLinksTitle" class="font-extrabold text-white text-base mb-4">روابط سريعة</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li data-nav-section="portals"><a href="#portals" data-i18n="footerLinkEst" class="hover:text-gold transition">استمارة طلب عمالة للمنشآت</a></li>
+                    <li data-nav-section="portals"><a href="#portals" data-i18n="footerLinkCand" class="hover:text-gold transition">استمارة تسجيل المرشحين</a></li>
+                    <li data-nav-section="sectors"><a href="#sectors" data-i18n="footerLinkSectors" class="hover:text-gold transition">القطاعات والتخصصات</a></li>
+                    <li data-nav-section="about"><a href="#about" data-i18n="footerLinkAbout" class="hover:text-gold transition">عن المؤسسة</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-3">
+                <h4 data-i18n="footerContactTitle" class="font-extrabold text-white text-base mb-4">تواصل رسمي</h4>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-center gap-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-4 h-4 text-gold shrink-0"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                        <span id="footerEmail" dir="ltr">info@smq-manpower.com</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-4 h-4 text-gold shrink-0"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                        <span id="footerPhone" dir="ltr">+966 50 000 0000</span>
+                    </li>
+                    <li class="flex items-center gap-2.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" aria-hidden="true" class="lucide lucide-globe w-4 h-4 text-gold shrink-0"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        <span data-i18n="footerAddress">المملكة العربية السعودية</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div>© <span id="currentYear">2026</span> <span class="text-slate-300 font-bold">SMQ Manpower</span>. All Rights Reserved.</div>
+            <div data-i18n="footerDesigned">مصمم بدقة ليلائم نموذج العمل السعودي والمستندات الرسمية</div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- FLOATING WHATSAPP & BACK TO TOP BUTTONS    -->
+    <!-- ========================================== -->
+    <button type="button" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="العودة للأعلى" class="fixed bottom-24 left-6 z-40 w-11 h-11 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 rounded-full shadow-lg items-center justify-center hover:bg-saudi-emerald hover:text-white transition hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-up" aria-hidden="true" class="lucide lucide-chevron-up w-5 h-5"><path d="m18 15-6-6-6 6"></path></svg>
+    </button>
+
+    <a id="floatingWhatsappBtn" href="https://wa.me/963994927073?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%85%D8%A4%D8%B3%D8%B3%D8%A9%20SMQ%20Manpower%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B5%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%82%D8%AF%D8%A7%D9%85%20%D9%88%D8%A7%D9%84%D8%AA%D9%88%D8%B8%D9%8A%D9%81." target="_blank" rel="noopener" aria-label="تواصل واتساب" class="fixed bottom-6 left-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 wa-pulse">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="message-circle" aria-hidden="true" class="lucide lucide-message-circle w-7 h-7 fill-white text-[#25D366]"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+    </a>
+
+    <!-- ========================================== -->
+    <!-- MODAL FOR ADVANCED CUSTOMIZATION           -->
+    <!-- ========================================== -->
+    
+
+    <!-- ========================================== -->
+    <!-- CONFIGURATION & INTERACTIVITY SCRIPT       -->
+    <!-- ========================================== -->
+    <script>
+        // 1. DEFAULT CONFIGURATION OBJECT
+        const SMQ_CONFIG = {
+    "establishmentFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfY3ile8LdcPOHHpB4PRFfREpKmjLW2WFL9Y5RN3j3nHsDIiQ/viewform?usp=dialog",
+    "candidateFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf-M1w1LRoJdyGNxAzNohiA6Ol_UWtT0ek_UMfQxT4c4SdcUQ/viewform?usp=dialog",
+    "whatsappNumber": "963994927073",
+    "displayPhone": "+966 50 000 0000",
+    "emailAddress": "info@smq-manpower.com",
+    "brandName": "SMQ Manpower",
+    "brandSubAr": "مؤسسة إس إم كيو للاستقدام",
+    "brandSubEn": "SMQ Manpower & Recruitment",
+    "whatsappMessageAr": "السلام عليكم مؤسسة SMQ Manpower، أود الاستفسار بخصوص خدمات الاستقدام والتوظيف.",
+    "whatsappMessageEn": "Hello SMQ Manpower, I would like to inquire about recruitment and manpower services.",
+    "customLogo": "assets/logo.jpg",
+    "heroBgImage": "",
+    "fontFamily": "Tajawal",
+    "primaryColor": "#0a4d3c",
+    "secondaryColor": "#c59b27",
+    "bgColor": "#f8fafc",
+    "fontScale": "1",
+    "cardRadius": "1rem",
+    "hiddenSections": {
+        "about": false,
+        "sectors": false,
+        "why-us": false,
+        "steps": false,
+        "portals": false
+    },
+    "customMenus": {
+        "ar": {
+            "navPortals": "استمارات التسجيل"
+        },
+        "en": {}
+    },
+    "inlineEdits": {
+        "ar": {
+            "brandSubtitle": "مؤسسة إس إم كيو للاستقدام",
+            "navAbout": "عن المؤسسة",
+            "navPortals": "استمارات التسجيل",
+            "navSectors": "القطاعات والتخصصات",
+            "navSteps": "خطوات العمل",
+            "navStartBtn": "ابدأ الطلب الآن",
+            "mobileStartBtn": "اختر بوابة التسجيل",
+            "heroBadge": "حلول استقدام وتوظيف معتمدة في المملكة العربية السعودية",
+            "heroTitle": "نربط منشآتكم بأفضل <span class=\"text-gold\">الكوادر والكفاءات المهنية</span> الموثوقة",
+            "heroSubtitle": "في <strong class=\"text-white\">مؤسسة إس إم كيو (SMQ Manpower)</strong>، نقدم حلول استقدام وتشغيل متكاملة تضمن للشركات السعودية سرعة الإنجاز وجودة الاختيار، وتفتح للكوادر المهنية آفاقاً وظيفية آمنة ومتميزة.",
+            "heroCtaEst": "طلب كوادر للمنشآت",
+            "heroCtaCand": "تسجيل المرشحين والعمال",
+            "stat1Val": "100%",
+            "stat1Label": "التزام بالأنظمة السعودية",
+            "stat2Val": "+4 قطاعات",
+            "stat2Label": "طبية، ضيافة، فنية، وتشغيل",
+            "stat3Val": "فحص دقيق",
+            "stat3Label": "تدقيق السير الذاتية والمهارات",
+            "stat4Val": "دعم مستمر",
+            "stat4Label": "متابعة قبل وبعد الاستقدام",
+            "portalsBadge": "بوابات التقديم المباشر",
+            "portalsTitle": "اختر المسار المناسب لاحتياجك",
+            "portalsSubtitle": "صممنا تجربة تسجيل ميسرة وسريعة لكل من أصحاب الأعمال والباحثين عن فرص عمل مهنية في المملكة.",
+            "cardEstTag": "قطاع الأعمال (B2B)",
+            "cardEstTitle": "للمنشآت والشركات",
+            "cardEstDesc": "هل تبحث عن كوادر مهنية مدربة ومؤهلة لتعزيز فريق عملك؟ سجل طلب منشأتك الآن وسيتواصل معك مستشارونا لتوفير المرشحين الأنسب.",
+            "cardEstItem1": "توفير كفاءات طبية، فنية، ضيافة، وخدمات مساندة.",
+            "cardEstItem2": "فلترة ومقابلات أولية دقيقة قبل ترشيح السير الذاتية.",
+            "cardEstItem3": "سرعة في إنهاء الإجراءات والتنسيق اللوجستي.",
+            "cardEstBtn": "استمارة طلب عمالة للمنشآت",
+            "cardCandTag": "للكوادر والمرشحين",
+            "cardCandTitle": "تسجيل المرشحين والكفاءات",
+            "cardCandDesc": "انضم إلى قاعدة بيانات المرشحين المعتمدة لدى SMQ Manpower للعمل لدى كبرى الشركات والمؤسسات في المملكة العربية السعودية.",
+            "cardCandItem1": "فرص عمل موثوقة بعقود واضحة وحقوق محفوظة.",
+            "cardCandItem2": "توجيه مباشر للوظائف المناسبة لمؤهلاتك وخبراتك.",
+            "cardCandItem3": "متابعة مستمرة وإرشاد كامل حتى استلام العمل.",
+            "cardCandBtn": "استمارة تسجيل المرشحين",
+            "aboutBadge": "عن مؤسسة إس إم كيو SMQ Manpower",
+            "aboutTitle": "نصنع الفارق في إدارة الموارد البشرية وتوفير الكوادر المتميزة",
+            "aboutDesc": "تُعد <strong>مؤسسة إس إم كيو (SMQ Manpower)</strong> إحدى الجهات المتخصصة في تقديم حلول الاستقدام والتشغيل الشاملة للمنشآت والشركات في المملكة العربية السعودية. نتميز بالدقة العالية في اختيار وتدقيق السير الذاتية للعمالة الفلبينية والدولية، مما يضمن تلبية الاحتياجات التشغيلية بأعلى معايير الكفاءة والاحترافية.",
+            "aboutFeat1Title": "سرعة في التنفيذ",
+            "aboutFeat1Desc": "إجراءات منظمة تختصر الوقت على المنشأة",
+            "aboutFeat2Title": "دقة الاختيار",
+            "aboutFeat2Desc": "اختبار وتقييم مهني للمرشح قبل الاعتماد",
+            "sectorsBadge": "تغطية شاملة لقطاعات السوق السعودي",
+            "sectorsTitle": "القطاعات والتخصصات التي نخدمها",
+            "sectorsSubtitle": "نوفر كفاءات متخصصة ومدربة بعناية لتلبية متطلبات القطاعات الحيوية في المملكة.",
+            "sec1Title": "القطاع الصحي والطبي",
+            "sec1Desc": "تمريض، فنيو مختبرات، أخصائيو علاج طبيعي، وكوادر مساندة للمستشفيات والمجمعات الطبية.",
+            "sec2Title": "الضيافة والفنادق",
+            "sec2Desc": "طهاة محترفون، مقدمو طعام، باريستا، وموظفو استقبال وخدمات فندقية راقية.",
+            "sec3Title": "التشغيل والصيانة الفنية",
+            "sec3Desc": "فنيو كهرباء وتكييف، ميكانيكا، صيانة مباني، ومشغلو معدات ومصانع بخبرات معتمدة.",
+            "sec4Title": "الخدمات المساندة والتجزئة",
+            "sec4Desc": "موظفو مبيعات، خدمة عملاء، سائقون، وكوادر لوجستية وإدارية لقطاع التجزئة والشركات.",
+            "stepsBadge": "آلية عمل واضحة ومنظمة",
+            "stepsTitle": "كيف نعمل في SMQ Manpower؟",
+            "step1Title": "تعبئة الاستمارة",
+            "step1Desc": "تقديم طلب المنشأة أو تسجيل بيانات المرشح إلكترونياً خلال دقائق.",
+            "step2Title": "المراجعة والتدقيق",
+            "step2Desc": "فرز الطلبات ومطابقة المؤهلات والخبرات مع اشتراطات العمل.",
+            "step3Title": "المقابلة والاعتماد",
+            "step3Desc": "تنسيق المقابلات الشخصية واعتماد المرشحين الأنسب للمنشأة.",
+            "step4Title": "الاستقدام والمباشرة",
+            "step4Desc": "إنهاء إجراءات التأشيرة والسفر وضمان مباشرة العمل بسلاسة.",
+            "ctaTitle": "هل لديك استفسار مباشر أو طلب عاجل؟",
+            "ctaSubtitle": "فريق خدمة العملاء والاستقدام لدينا جاهز للرد على استفسارات المنشآت والمرشحين عبر الواتساب أو البريد الرسمي.",
+            "ctaWaBtn": "تواصل معنا عبر واتساب",
+            "ctaFormsBtn": "الانتقال إلى استمارات التسجيل",
+            "footerDesc": "مؤسسة إس إم كيو للاستقدام والحلول المهنية - نربط قطاع الأعمال بالكوادر العالمية المؤهلة وفق أعلى المعايير.",
+            "footerCoverage": "المملكة العربية السعودية | تغطية شاملة (الرياض، جدة، الدمام، وكافة المناطق)",
+            "footerLinksTitle": "روابط سريعة",
+            "footerLinkEst": "استمارة طلب عمالة للمنشآت",
+            "footerLinkCand": "استمارة تسجيل المرشحين",
+            "footerLinkSectors": "القطاعات والتخصصات",
+            "footerLinkAbout": "عن المؤسسة",
+            "footerContactTitle": "تواصل رسمي",
+            "footerAddress": "المملكة العربية السعودية",
+            "footerDesigned": "مصمم بدقة ليلائم نموذج العمل السعودي والمستندات الرسمية",
+            "#aboutCardTop1": "OFFICIAL REGISTRATION",
+            "#aboutCardTop2": "SAUDI ARABIA",
+            "#aboutCardBadge": "EXCELLENCE &amp; COMMITMENT",
+            "#aboutCardMainTitle": "\n                                    الريادة في حلول الاستقدام والتوظيف\n                                ",
+            "#aboutCardLogoText": "SMQ"
+        },
+        "en": {}
+    },
+    "socials": {
+        "facebook": "تتت",
+        "linkedin": "ggggggg",
+        "x": "",
+        "instagram": "ggg",
+        "tiktok": ""
+    },
+    "customSeoTitle": "",
+    "brandSubtitleCustom": "مؤسسة إس إم كيو للاستقدام والتشغيل",
+    "phoneDisplay": "+966 50 000 0000",
+    "email": "info@smq-manpower.com"
+};
+
+        // 2. TRANSLATION DICTIONARY (ARABIC & ENGLISH)
+        const TRANSLATIONS = {
+            ar: {
+                pageTitle: "SMQ Manpower | مؤسسة إس إم كيو للاستقدام والحلول المهنية",
+                adminHint: "<strong>وضع المعاينة والإعداد السريع:</strong> يمكنك تعديل النصوص مباشرة، تغيير الشعار والخطوط، وتخصيص الألوان بالكامل.",
+                editLinksBtn: "تخصيص الألوان، الشعار، والروابط",
+                hideBannerBtn: "إخفاء الشريط",
+                brandSubtitle: "مؤسسة إس إم كيو للاستقدام",
+                navAbout: "عن المؤسسة",
+                navPortals: "بوابات التسجيل",
+                navSectors: "القطاعات والتخصصات",
+                navSteps: "خطوات العمل",
+                navStartBtn: "ابدأ الطلب الآن",
+                mobileStartBtn: "اختر بوابة التسجيل",
+                heroBadge: "حلول استقدام وتوظيف معتمدة في المملكة العربية السعودية",
+                heroTitle: "نربط منشآتكم بأفضل <span class='text-gold'>الكوادر والكفاءات المهنية</span> الموثوقة",
+                heroSubtitle: "في <strong class='text-white'>مؤسسة إس إم كيو (SMQ Manpower)</strong>، نقدم حلول استقدام وتشغيل متكاملة تضمن للشركات السعودية سرعة الإنجاز وجودة الاختيار، وتفتح للكوادر المهنية آفاقاً وظيفية آمنة ومتميزة.",
+                heroCtaEst: "طلب كوادر للمنشآت",
+                heroCtaCand: "تسجيل المرشحين والعمال",
+                stat1Val: "100%",
+                stat1Label: "التزام بالأنظمة السعودية",
+                stat2Val: "+4 قطاعات",
+                stat2Label: "طبية، ضيافة، فنية، وتشغيل",
+                stat3Val: "فحص دقيق",
+                stat3Label: "تدقيق السير الذاتية والمهارات",
+                stat4Val: "دعم مستمر",
+                stat4Label: "متابعة قبل وبعد الاستقدام",
+                portalsBadge: "بوابات التقديم المباشر",
+                portalsTitle: "اختر المسار المناسب لاحتياجك",
+                portalsSubtitle: "صممنا تجربة تسجيل ميسرة وسريعة لكل من أصحاب الأعمال والباحثين عن فرص عمل مهنية في المملكة.",
+                cardEstTag: "قطاع الأعمال (B2B)",
+                cardEstTitle: "للمنشآت والشركات",
+                cardEstDesc: "هل تبحث عن كوادر مهنية مدربة ومؤهلة لتعزيز فريق عملك؟ سجل طلب منشأتك الآن وسيتواصل معك مستشارونا لتوفير المرشحين الأنسب.",
+                cardEstItem1: "توفير كفاءات طبية، فنية، ضيافة، وخدمات مساندة.",
+                cardEstItem2: "فلترة ومقابلات أولية دقيقة قبل ترشيح السير الذاتية.",
+                cardEstItem3: "سرعة في إنهاء الإجراءات والتنسيق اللوجستي.",
+                cardEstBtn: "استمارة طلب عمالة للمنشآت",
+                cardCandTag: "للكوادر والمرشحين",
+                cardCandTitle: "تسجيل المرشحين والكفاءات",
+                cardCandDesc: "انضم إلى قاعدة بيانات المرشحين المعتمدة لدى SMQ Manpower للعمل لدى كبرى الشركات والمؤسسات في المملكة العربية السعودية.",
+                cardCandItem1: "فرص عمل موثوقة بعقود واضحة وحقوق محفوظة.",
+                cardCandItem2: "توجيه مباشر للوظائف المناسبة لمؤهلاتك وخبراتك.",
+                cardCandItem3: "متابعة مستمرة وإرشاد كامل حتى استلام العمل.",
+                cardCandBtn: "استمارة تسجيل المرشحين",
+                aboutBadge: "عن مؤسسة إس إم كيو SMQ Manpower",
+                aboutTitle: "نصنع الفارق في إدارة الموارد البشرية وتوفير الكوادر المتميزة",
+                aboutDesc: "تُعد <strong>مؤسسة إس إم كيو (SMQ Manpower)</strong> إحدى الجهات المتخصصة في تقديم حلول الاستقدام والتشغيل الشاملة للمنشآت والشركات في المملكة العربية السعودية. نتميز بالدقة العالية في اختيار وتدقيق السير الذاتية للعمالة الفلبينية والدولية، مما يضمن تلبية الاحتياجات التشغيلية بأعلى معايير الكفاءة والاحترافية.",
+                aboutFeat1Title: "سرعة في التنفيذ",
+                aboutFeat1Desc: "إجراءات منظمة تختصر الوقت على المنشأة",
+                aboutFeat2Title: "دقة الاختيار",
+                aboutFeat2Desc: "اختبار وتقييم مهني للمرشح قبل الاعتماد",
+                sectorsBadge: "تغطية شاملة لقطاعات السوق السعودي",
+                sectorsTitle: "القطاعات والتخصصات التي نخدمها",
+                sectorsSubtitle: "نوفر كفاءات متخصصة ومدربة بعناية لتلبية متطلبات القطاعات الحيوية في المملكة.",
+                sec1Title: "القطاع الصحي والطبي",
+                sec1Desc: "تمريض، فنيو مختبرات، أخصائيو علاج طبيعي، وكوادر مساندة للمستشفيات والمجمعات الطبية.",
+                sec2Title: "الضيافة والفنادق",
+                sec2Desc: "طهاة محترفون، مقدمو طعام، باريستا، وموظفو استقبال وخدمات فندقية راقية.",
+                sec3Title: "التشغيل والصيانة الفنية",
+                sec3Desc: "فنيو كهرباء وتكييف، ميكانيكا، صيانة مباني، ومشغلو معدات ومصانع بخبرات معتمدة.",
+                sec4Title: "الخدمات المساندة والتجزئة",
+                sec4Desc: "موظفو مبيعات، خدمة عملاء، سائقون، وكوادر لوجستية وإدارية لقطاع التجزئة والشركات.",
+                stepsBadge: "آلية عمل واضحة ومنظمة",
+                stepsTitle: "كيف نعمل في SMQ Manpower؟",
+                step1Title: "تعبئة الاستمارة",
+                step1Desc: "تقديم طلب المنشأة أو تسجيل بيانات المرشح إلكترونياً خلال دقائق.",
+                step2Title: "المراجعة والتدقيق",
+                step2Desc: "فرز الطلبات ومطابقة المؤهلات والخبرات مع اشتراطات العمل.",
+                step3Title: "المقابلة والاعتماد",
+                step3Desc: "تنسيق المقابلات الشخصية واعتماد المرشحين الأنسب للمنشأة.",
+                step4Title: "الاستقدام والمباشرة",
+                step4Desc: "إنهاء إجراءات التأشيرة والسفر وضمان مباشرة العمل بسلاسة.",
+                ctaTitle: "هل لديك استفسار مباشر أو طلب عاجل؟",
+                ctaSubtitle: "فريق خدمة العملاء والاستقدام لدينا جاهز للرد على استفسارات المنشآت والمرشحين عبر الواتساب أو البريد الرسمي.",
+                ctaWaBtn: "تواصل معنا عبر واتساب",
+                ctaFormsBtn: "الانتقال إلى استمارات التسجيل",
+                footerDesc: "مؤسسة إس إم كيو للاستقدام والحلول المهنية - نربط قطاع الأعمال بالكوادر العالمية المؤهلة وفق أعلى المعايير.",
+                footerCoverage: "المملكة العربية السعودية | تغطية شاملة (الرياض، جدة، الدمام، وكافة المناطق)",
+                footerLinksTitle: "روابط سريعة",
+                footerLinkEst: "استمارة طلب عمالة للمنشآت",
+                footerLinkCand: "استمارة تسجيل المرشحين",
+                footerLinkSectors: "القطاعات والتخصصات",
+                footerLinkAbout: "عن المؤسسة",
+                footerContactTitle: "تواصل رسمي",
+                footerAddress: "المملكة العربية السعودية",
+                footerDesigned: "مصمم بدقة ليلائم نموذج العمل السعودي والمستندات الرسمية",
+                modalTitle: "لوحة التحكم والتخصيص الشامل",
+                modalLabelEst: "رابط استمارة المنشآت (Google Form):",
+                modalLabelCand: "رابط استمارة المرشحين (Google Form):",
+                modalLabelWa: "رقم الواتساب (دولي بدون +):",
+                modalLabelEmail: "البريد الإلكتروني:",
+                modalCancel: "إلغاء",
+                modalSave: "تطبيق وحفظ"
+            },
+            en: {
+                pageTitle: "SMQ Manpower | Recruitment & Professional Workforce Solutions in KSA",
+                adminHint: "<strong>Quick Setup & Preview Mode:</strong> Edit texts directly on the page, upload your logo, or customize colors & fonts.",
+                editLinksBtn: "Customize Theme, Logo & Links",
+                hideBannerBtn: "Hide Bar",
+                brandSubtitle: "SMQ Manpower & Recruitment",
+                navAbout: "About Us",
+                navPortals: "Registration Portals",
+                navSectors: "Sectors & Specialties",
+                navSteps: "How It Works",
+                navStartBtn: "Start Request",
+                mobileStartBtn: "Choose Registration Portal",
+                heroBadge: "Certified Recruitment & Manpower Solutions in Saudi Arabia",
+                heroTitle: "Connecting Your Business with <span class='text-gold'>Top Qualified Professionals</span>",
+                heroSubtitle: "At <strong class='text-white'>SMQ Manpower</strong>, we deliver end-to-end recruitment solutions ensuring speed and quality selection for Saudi enterprises, while creating secure career opportunities for skilled professionals.",
+                heroCtaEst: "Request Manpower (Companies)",
+                heroCtaCand: "Candidate Registration",
+                stat1Val: "100%",
+                stat1Label: "Saudi Labor Law Compliance",
+                stat2Val: "4+ Sectors",
+                stat2Label: "Medical, Hospitality, Technical & Ops",
+                stat3Val: "Strict Screening",
+                stat3Label: "Verified CVs & Practical Skills",
+                stat4Val: "24/7 Support",
+                stat4Label: "Pre & Post-Deployment Follow-up",
+                portalsBadge: "Direct Application Portals",
+                portalsTitle: "Choose Your Registration Path",
+                portalsSubtitle: "A streamlined, fast digital registration experience tailored for both Saudi businesses and job seekers.",
+                cardEstTag: "Business Sector (B2B)",
+                cardEstTitle: "For Companies & Establishments",
+                cardEstDesc: "Looking for skilled and vetted professionals to strengthen your workforce? Submit your company request and our consultants will match the right candidates.",
+                cardEstItem1: "Medical, technical, hospitality, and support staff.",
+                cardEstItem2: "Thorough pre-screening and interviews before CV submission.",
+                cardEstItem3: "Fast processing and seamless logistical coordination.",
+                cardEstBtn: "Establishment Manpower Form",
+                cardCandTag: "For Professionals & Workers",
+                cardCandTitle: "Candidate & Talent Registration",
+                cardCandDesc: "Join SMQ Manpower's certified talent database to work with leading companies and institutions across Saudi Arabia.",
+                cardCandItem1: "Verified job opportunities with transparent contracts.",
+                cardCandItem2: "Direct matching with roles fitting your skills and experience.",
+                cardCandItem3: "Continuous guidance until smooth onboarding.",
+                cardCandBtn: "Candidate Registration Form",
+                aboutBadge: "About SMQ Manpower",
+                aboutTitle: "Setting the Benchmark in HR & Talent Acquisition",
+                aboutDesc: "<strong>SMQ Manpower</strong> is a specialized recruitment agency providing comprehensive staffing and operational workforce solutions for enterprises in Saudi Arabia. We excel in rigorous screening and vetting of Filipino and international talent to ensure operational excellence.",
+                aboutFeat1Title: "Fast Execution",
+                aboutFeat1Desc: "Structured workflows that save valuable time",
+                aboutFeat2Title: "Precision Selection",
+                aboutFeat2Desc: "Professional skill assessment before approval",
+                sectorsBadge: "Comprehensive Saudi Market Coverage",
+                sectorsTitle: "Sectors & Specialties We Serve",
+                sectorsSubtitle: "We supply carefully trained specialists to meet the demands of vital industries across the Kingdom.",
+                sec1Title: "Healthcare & Medical",
+                sec1Desc: "Nurses, lab technicians, physiotherapists, and support staff for hospitals and clinics.",
+                sec2Title: "Hospitality & Hotels",
+                sec2Desc: "Professional chefs, waiters, baristas, receptionists, and upscale hotel personnel.",
+                sec3Title: "Technical Operations & Maintenance",
+                sec3Desc: "Electrical & HVAC technicians, mechanics, facility maintenance, and plant operators.",
+                sec4Title: "Support Services & Retail",
+                sec4Desc: "Sales associates, customer service, drivers, and logistics/admin staff for retail and corporate.",
+                stepsBadge: "Clear & Structured Process",
+                stepsTitle: "How SMQ Manpower Works",
+                step1Title: "Submit Form",
+                step1Desc: "Complete the company request or candidate application online in minutes.",
+                step2Title: "Review & Vetting",
+                step2Desc: "Screen applications and verify qualifications against job requirements.",
+                step3Title: "Interview & Approval",
+                step3Desc: "Coordinate interviews and finalize approval of the best-fit candidates.",
+                step4Title: "Deployment & Onboarding",
+                step4Desc: "Complete visa and travel formalities for smooth onboarding.",
+                ctaTitle: "Have a Direct Inquiry or Urgent Request?",
+                ctaSubtitle: "Our client relations and recruitment team is ready to assist companies and candidates via WhatsApp or email.",
+                ctaWaBtn: "Chat with Us on WhatsApp",
+                ctaFormsBtn: "Go to Registration Portals",
+                footerDesc: "SMQ Manpower & Recruitment Solutions - Connecting businesses with qualified global talent under the highest standards.",
+                footerCoverage: "Kingdom of Saudi Arabia | Full Coverage (Riyadh, Jeddah, Dammam & All Regions)",
+                footerLinksTitle: "Quick Links",
+                footerLinkEst: "Establishment Manpower Form",
+                footerLinkCand: "Candidate Registration Form",
+                footerLinkSectors: "Sectors & Specialties",
+                footerLinkAbout: "About Us",
+                footerContactTitle: "Official Contact",
+                footerAddress: "Kingdom of Saudi Arabia",
+                footerDesigned: "Crafted to match Saudi business standards and official documentation",
+                modalTitle: "Comprehensive Theme & Site Customizer",
+                modalLabelEst: "Establishment Form URL (Google Form):",
+                modalLabelCand: "Candidate Form URL (Google Form):",
+                modalLabelWa: "WhatsApp Number (International without +):",
+                modalLabelEmail: "Email Address:",
+                modalCancel: "Cancel",
+                modalSave: "Apply & Save"
+            }
+        };
+
+        let currentLang = localStorage.getItem('SMQ_LANG') || 'ar';
+        let isVisualEditActive = false;
+
+        // 3. HELPER: DARKEN HEX COLOR
+        function darkenColor(hex, percent) {
+            if (!hex || !hex.startsWith('#')) return '#063529';
+            let num = parseInt(hex.replace('#', ''), 16);
+            let amt = Math.round(2.55 * percent);
+            let R = (num >> 16) - amt;
+            let G = ((num >> 8) & 0x00FF) - amt;
+            let B = (num & 0x0000FF) - amt;
+            return '#' + (
+                0x1000000 +
+                (R < 255 ? (R < 0 ? 0 : R) : 255) * 0x10000 +
+                (G < 255 ? (G < 0 ? 0 : G) : 255) * 0x100 +
+                (B < 255 ? (B < 0 ? 0 : B) : 255)
+            ).toString(16).slice(1);
+        }
+
+        // 4. DARK MODE TOGGLE
+        function toggleDarkMode() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('SMQ_DARK_MODE', isDark ? 'dark' : 'light');
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function initDarkMode() {
+            const savedTheme = localStorage.getItem('SMQ_DARK_MODE');
+            if (savedTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        }
+
+        // 5. VISUAL LIVE TEXT EDITING
+        function toggleVisualEditMode() {
+            isVisualEditActive = !isVisualEditActive;
+            const body = document.body;
+            const btnLabel = document.getElementById('visualEditLabel');
+            const btn = document.getElementById('btnToggleVisualEdit');
+
+            body.classList.toggle('visual-edit-mode', isVisualEditActive);
+            document.querySelectorAll('[data-i18n], [data-editable]').forEach(el => {
+                if (el.closest('#quickEditBanner') || el.closest('#configModal')) return;
+                el.contentEditable = isVisualEditActive ? 'true' : 'false';
+            });
+
+            if (isVisualEditActive) {
+                btn.classList.replace('bg-white', 'bg-saudi-emerald');
+                btn.classList.replace('text-slate-900', 'text-white');
+                btnLabel.textContent = currentLang === 'ar' ? 'حفظ وإنهاء تعديل النصوص' : 'Save & Finish Editing';
+            } else {
+                btn.classList.replace('bg-saudi-emerald', 'bg-white');
+                btn.classList.replace('text-white', 'text-slate-900');
+                btnLabel.textContent = currentLang === 'ar' ? 'تفعيل تعديل النصوص المباشر' : 'Enable Live Text Edit';
+                saveInlineEditedTexts();
+            }
+        }
+
+        function saveInlineEditedTexts() {
+            if (!SMQ_CONFIG.inlineEdits) SMQ_CONFIG.inlineEdits = { ar: {}, en: {} };
+            if (!SMQ_CONFIG.inlineEdits[currentLang]) SMQ_CONFIG.inlineEdits[currentLang] = {};
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                if (el.closest('#quickEditBanner') || el.closest('#configModal')) return;
+                const key = el.getAttribute('data-i18n');
+                SMQ_CONFIG.inlineEdits[currentLang][key] = el.innerHTML;
+            });
+            ['aboutCardTop1', 'aboutCardTop2', 'aboutCardBadge', 'aboutCardMainTitle', 'aboutCardLogoText'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) SMQ_CONFIG.inlineEdits[currentLang]['#' + id] = el.innerHTML;
+            });
+            localStorage.setItem('SMQ_CONFIG_SAVED', JSON.stringify(SMQ_CONFIG));
+        }
+
+        // 6. HERO BACKGROUND & LOGO HANDLERS
+        function handleHeroBgUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                SMQ_CONFIG.heroBgImage = e.target.result;
+                applyHeroBg();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function resetHeroBg() {
+            SMQ_CONFIG.heroBgImage = "";
+            const inp = document.getElementById('inputHeroBgFile');
+            if (inp) inp.value = '';
+            applyHeroBg();
+        }
+
+        function applyHeroBg() {
+            const heroSec = document.getElementById('heroSection');
+            const overlay = document.getElementById('heroImageOverlay');
+            if (!heroSec) return;
+            if (SMQ_CONFIG.heroBgImage) {
+                heroSec.style.backgroundImage = `url('${SMQ_CONFIG.heroBgImage}')`;
+                heroSec.style.backgroundSize = 'cover';
+                heroSec.style.backgroundPosition = 'center';
+                if (overlay) overlay.classList.remove('hidden');
+            } else {
+                heroSec.style.backgroundImage = '';
+                if (overlay) overlay.classList.add('hidden');
+            }
+        }
+
+        function handleLogoUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                SMQ_CONFIG.customLogo = e.target.result;
+                renderLogo();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function resetLogo() {
+            SMQ_CONFIG.customLogo = "";
+            const fileInp = document.getElementById('inputLogoFile');
+            if (fileInp) fileInp.value = "";
+            renderLogo();
+        }
+
+        function renderLogo() {
+            const container = document.getElementById('headerLogoContainer');
+            const footerContainer = document.getElementById('footerLogoContainer');
+            if (container) {
+                if (SMQ_CONFIG.customLogo) {
+                    container.className = "h-12 w-auto max-w-[140px] rounded-lg flex items-center justify-center overflow-hidden bg-white p-1 border border-slate-200 shadow-sm";
+                    container.innerHTML = `<img src="${SMQ_CONFIG.customLogo}" alt="Logo" class="h-full w-auto object-contain">`;
+                } else {
+                    container.className = "w-12 h-12 rounded-xl bg-saudi-emerald flex items-center justify-center text-gold shadow-md border border-gold/30 overflow-hidden";
+                    container.innerHTML = `<span class="font-extrabold text-xl tracking-tighter">SMQ</span>`;
+                }
+            }
+            if (footerContainer) {
+                if (SMQ_CONFIG.customLogo) {
+                    footerContainer.className = "h-10 w-auto max-w-[120px] rounded-lg flex items-center justify-center overflow-hidden bg-white p-1";
+                    footerContainer.innerHTML = `<img src="${SMQ_CONFIG.customLogo}" alt="Logo" class="h-full w-auto object-contain">`;
+                } else {
+                    footerContainer.className = "w-10 h-10 rounded-lg bg-saudi-emerald flex items-center justify-center text-gold font-black overflow-hidden";
+                    footerContainer.innerHTML = `SMQ`;
+                }
+            }
+        }
+
+        // 7. SECTION VISIBILITY & MENU NAMES
+        function toggleSectionVisibility(sectionId, isVisible) {
+            const el = document.getElementById(sectionId);
+            if (el) {
+                el.classList.toggle('hidden', !isVisible);
+            }
+            document.querySelectorAll(`[data-nav-section="${sectionId}"]`).forEach(link => {
+                link.classList.toggle('hidden', !isVisible);
+            });
+            SMQ_CONFIG.hiddenSections[sectionId] = !isVisible;
+        }
+
+        function updateCustomMenuName(menuKey, value) {
+            if (!SMQ_CONFIG.customMenus) SMQ_CONFIG.customMenus = { ar: {}, en: {} };
+            if (!SMQ_CONFIG.customMenus[currentLang]) SMQ_CONFIG.customMenus[currentLang] = {};
+            SMQ_CONFIG.customMenus[currentLang][menuKey] = value;
+
+            document.querySelectorAll(`[data-i18n="${menuKey}"]`).forEach(el => {
+                if (value && value.trim() !== '') {
+                    el.textContent = value;
+                } else if (TRANSLATIONS[currentLang][menuKey]) {
+                    el.innerHTML = TRANSLATIONS[currentLang][menuKey];
+                }
+            });
+        }
+
+        // 8. LIVE THEME PREVIEW & PRESETS
+        function applyColorPreset(primary, secondary, bg) {
+            document.getElementById('inputColorPrimary').value = primary;
+            document.getElementById('inputColorSecondary').value = secondary;
+            document.getElementById('inputColorBg').value = bg;
+            livePreviewTheme();
+        }
+
+        function livePreviewTheme() {
+            const primary = document.getElementById('inputColorPrimary').value;
+            const secondary = document.getElementById('inputColorSecondary').value;
+            const bg = document.getElementById('inputColorBg').value;
+            const font = document.getElementById('inputFontFamily').value;
+            const radius = document.getElementById('inputCardRadius').value;
+            const scale = document.getElementById('inputFontScale').value;
+
+            document.getElementById('hexPrimary').textContent = primary.toUpperCase();
+            document.getElementById('hexSecondary').textContent = secondary.toUpperCase();
+            document.getElementById('hexBg').textContent = bg.toUpperCase();
+            document.getElementById('fontScaleLabel').textContent = Math.round(scale * 100) + '%';
+
+            const root = document.documentElement;
+            root.style.setProperty('--color-primary', primary);
+            root.style.setProperty('--color-primary-dark', darkenColor(primary, 22));
+            root.style.setProperty('--color-secondary', secondary);
+            root.style.setProperty('--color-bg', bg);
+            root.style.setProperty('--font-ar', `'${font}'`);
+            root.style.setProperty('--card-radius', radius);
+            root.style.fontSize = (16 * parseFloat(scale)) + 'px';
+        }
+
+        // 9. APPLY LANGUAGE
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('SMQ_LANG', lang);
+
+            const html = document.documentElement;
+            html.setAttribute('lang', lang);
+            html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+            const dict = TRANSLATIONS[lang];
+            document.title = (SMQ_CONFIG.customSeoTitle && SMQ_CONFIG.customSeoTitle.trim() !== '') ? SMQ_CONFIG.customSeoTitle : dict.pageTitle;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const customVal = SMQ_CONFIG.customMenus && SMQ_CONFIG.customMenus[lang] && SMQ_CONFIG.customMenus[lang][key];
+                const inlineVal = SMQ_CONFIG.inlineEdits && SMQ_CONFIG.inlineEdits[lang] && SMQ_CONFIG.inlineEdits[lang][key];
+                if (customVal && customVal.trim() !== '') {
+                    el.textContent = customVal;
+                } else if (inlineVal && inlineVal.trim() !== '') {
+                    el.innerHTML = inlineVal;
+                } else if (dict[key]) {
+                    el.innerHTML = dict[key];
+                }
+            });
+
+            if (SMQ_CONFIG.inlineEdits && SMQ_CONFIG.inlineEdits[lang]) {
+                ['aboutCardTop1', 'aboutCardTop2', 'aboutCardBadge', 'aboutCardMainTitle', 'aboutCardLogoText'].forEach(id => {
+                    const savedHtml = SMQ_CONFIG.inlineEdits[lang]['#' + id];
+                    const el = document.getElementById(id);
+                    if (savedHtml && el) el.innerHTML = savedHtml;
+                });
+            }
+
+            const headerBrandSub = document.getElementById('headerBrandSub');
+            if (headerBrandSub) {
+                headerBrandSub.textContent = lang === 'ar'
+                    ? (SMQ_CONFIG.brandSubAr || dict.brandSubtitle)
+                    : (SMQ_CONFIG.brandSubEn || dict.brandSubtitle);
+            }
+
+            const visualLabel = document.getElementById('visualEditLabel');
+            if (visualLabel) {
+                if (isVisualEditActive) {
+                    visualLabel.textContent = lang === 'ar' ? 'حفظ وإنهاء تعديل النصوص' : 'Save & Finish Editing';
+                } else {
+                    visualLabel.textContent = lang === 'ar' ? 'تفعيل تعديل النصوص المباشر' : 'Enable Live Text Edit';
+                }
+            }
+
+            applyConfig();
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function toggleLanguage() {
+            const nextLang = currentLang === 'ar' ? 'en' : 'ar';
+            applyLanguage(nextLang);
+        }
+
+        // 10. APPLY CONFIGURATION
+        function applyConfig() {
+            const estBtn = document.getElementById('btnEstablishmentForm');
+            const candBtn = document.getElementById('btnCandidateForm');
+            if (estBtn) estBtn.href = SMQ_CONFIG.establishmentFormUrl;
+            if (candBtn) candBtn.href = SMQ_CONFIG.candidateFormUrl;
+
+            const waMsg = currentLang === 'ar' ? SMQ_CONFIG.whatsappMessageAr : SMQ_CONFIG.whatsappMessageEn;
+            const waUrl = `https://wa.me/${SMQ_CONFIG.whatsappNumber}?text=${encodeURIComponent(waMsg)}`;
+            const floatWa = document.getElementById('floatingWhatsappBtn');
+            const ctaWa = document.getElementById('ctaWhatsappBtn');
+            if (floatWa) floatWa.href = waUrl;
+            if (ctaWa) ctaWa.href = waUrl;
+
+            const footerEmail = document.getElementById('footerEmail');
+            const footerPhone = document.getElementById('footerPhone');
+            if (footerEmail) footerEmail.textContent = SMQ_CONFIG.emailAddress;
+            if (footerPhone) footerPhone.textContent = SMQ_CONFIG.displayPhone || ('+' + SMQ_CONFIG.whatsappNumber);
+
+            renderLogo();
+            applyHeroBg();
+            renderSocialLinks();
+
+            if (SMQ_CONFIG.customSeoTitle && SMQ_CONFIG.customSeoTitle.trim() !== '') {
+                document.title = SMQ_CONFIG.customSeoTitle;
+            }
+
+            const headerBrandEl = document.getElementById('headerBrandName');
+            const footerBrandEl = document.getElementById('footerBrandName');
+            if (headerBrandEl && SMQ_CONFIG.brandName) headerBrandEl.textContent = SMQ_CONFIG.brandName;
+            if (footerBrandEl && SMQ_CONFIG.brandName) footerBrandEl.textContent = SMQ_CONFIG.brandName;
+
+            const root = document.documentElement;
+            if (SMQ_CONFIG.primaryColor) {
+                root.style.setProperty('--color-primary', SMQ_CONFIG.primaryColor);
+                root.style.setProperty('--color-primary-dark', darkenColor(SMQ_CONFIG.primaryColor, 22));
+            }
+            if (SMQ_CONFIG.secondaryColor) root.style.setProperty('--color-secondary', SMQ_CONFIG.secondaryColor);
+            if (SMQ_CONFIG.bgColor) root.style.setProperty('--color-bg', SMQ_CONFIG.bgColor);
+            if (SMQ_CONFIG.fontFamily) root.style.setProperty('--font-ar', `'${SMQ_CONFIG.fontFamily}'`);
+            if (SMQ_CONFIG.cardRadius) root.style.setProperty('--card-radius', SMQ_CONFIG.cardRadius);
+            if (SMQ_CONFIG.fontScale) root.style.fontSize = (16 * parseFloat(SMQ_CONFIG.fontScale)) + 'px';
+
+            if (SMQ_CONFIG.hiddenSections) {
+                Object.keys(SMQ_CONFIG.hiddenSections).forEach(secId => {
+                    const isHidden = SMQ_CONFIG.hiddenSections[secId];
+                    const el = document.getElementById(secId);
+                    if (el) el.classList.toggle('hidden', isHidden);
+                    document.querySelectorAll(`[data-nav-section="${secId}"]`).forEach(link => {
+                        link.classList.toggle('hidden', isHidden);
+                    });
+                });
+            }
+        }
+
+        function renderSocialLinks() {
+            const container = document.getElementById('footerSocialLinks');
+            if (!container || !SMQ_CONFIG.socials) return;
+            const items = [
+                { url: SMQ_CONFIG.socials.facebook, label: 'Facebook', svg: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>' },
+                { url: SMQ_CONFIG.socials.linkedin, label: 'LinkedIn', svg: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>' },
+                { url: SMQ_CONFIG.socials.x, label: 'X', svg: '<path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/>' },
+                { url: SMQ_CONFIG.socials.instagram, label: 'Instagram', svg: '<rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>' },
+                { url: SMQ_CONFIG.socials.tiktok, label: 'TikTok', svg: '<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>' }
+            ];
+            container.innerHTML = items.filter(i => i.url && i.url.trim() !== '').map(i => `
+                <a href="${i.url}" target="_blank" rel="noopener" aria-label="${i.label}" title="${i.label}" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-saudi-emerald text-slate-300 hover:text-white flex items-center justify-center transition transform hover:-translate-y-0.5">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${i.svg}</svg>
+                </a>
+            `).join('');
+        }
+
+        // 11. MODAL TABS & CONTROLS
+        function switchModalTab(tabName) {
+            const tabs = ['theme', 'links', 'sections', 'social'];
+            tabs.forEach(t => {
+                const cap = t.charAt(0).toUpperCase() + t.slice(1);
+                const btn = document.getElementById('tabBtn' + cap);
+                const content = document.getElementById('tabContent' + cap);
+                if (!btn || !content) return;
+                if (t === tabName) {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold bg-saudi-emerald text-white transition";
+                    content.classList.remove('hidden');
+                } else {
+                    btn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition";
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function openConfigModal() {
+            document.getElementById('inputEstForm').value = SMQ_CONFIG.establishmentFormUrl;
+            document.getElementById('inputCandForm').value = SMQ_CONFIG.candidateFormUrl;
+            document.getElementById('inputWhatsapp').value = SMQ_CONFIG.whatsappNumber;
+            document.getElementById('inputDisplayPhone').value = SMQ_CONFIG.displayPhone || ('+' + SMQ_CONFIG.whatsappNumber);
+            document.getElementById('inputEmail').value = SMQ_CONFIG.emailAddress;
+            document.getElementById('inputBrandName').value = SMQ_CONFIG.brandName || "SMQ Manpower";
+            document.getElementById('inputBrandSub').value = currentLang === 'ar'
+                ? (SMQ_CONFIG.brandSubAr || "مؤسسة إس إم كيو للاستقدام")
+                : (SMQ_CONFIG.brandSubEn || "SMQ Manpower & Recruitment");
+
+            document.getElementById('inputColorPrimary').value = SMQ_CONFIG.primaryColor || "#0A4D3C";
+            document.getElementById('inputColorSecondary').value = SMQ_CONFIG.secondaryColor || "#C59B27";
+            document.getElementById('inputColorBg').value = SMQ_CONFIG.bgColor || "#F8FAFC";
+            document.getElementById('hexPrimary').textContent = (SMQ_CONFIG.primaryColor || "#0A4D3C").toUpperCase();
+            document.getElementById('hexSecondary').textContent = (SMQ_CONFIG.secondaryColor || "#C59B27").toUpperCase();
+            document.getElementById('hexBg').textContent = (SMQ_CONFIG.bgColor || "#F8FAFC").toUpperCase();
+
+            document.getElementById('inputCardRadius').value = SMQ_CONFIG.cardRadius || "1rem";
+            document.getElementById('inputFontScale').value = SMQ_CONFIG.fontScale || "1";
+            document.getElementById('fontScaleLabel').textContent = Math.round((parseFloat(SMQ_CONFIG.fontScale) || 1) * 100) + '%';
+            if (SMQ_CONFIG.fontFamily) {
+                document.getElementById('inputFontFamily').value = SMQ_CONFIG.fontFamily;
+            }
+
+            if (SMQ_CONFIG.socials) {
+                document.getElementById('inputSocialFacebook').value = SMQ_CONFIG.socials.facebook || "";
+                document.getElementById('inputSocialLinkedin').value = SMQ_CONFIG.socials.linkedin || "";
+                document.getElementById('inputSocialX').value = SMQ_CONFIG.socials.x || "";
+                document.getElementById('inputSocialInstagram').value = SMQ_CONFIG.socials.instagram || "";
+                document.getElementById('inputSocialTiktok').value = SMQ_CONFIG.socials.tiktok || "";
+            }
+            document.getElementById('inputSeoTitle').value = SMQ_CONFIG.customSeoTitle || "";
+
+            document.getElementById('chkStatsSection').checked = !SMQ_CONFIG.hiddenSections['statsSection'];
+            document.getElementById('chkPortalsSection').checked = !SMQ_CONFIG.hiddenSections['portals'];
+            document.getElementById('chkAboutSection').checked = !SMQ_CONFIG.hiddenSections['about'];
+            document.getElementById('chkSectorsSection').checked = !SMQ_CONFIG.hiddenSections['sectors'];
+            document.getElementById('chkStepsSection').checked = !SMQ_CONFIG.hiddenSections['steps'];
+
+            const menus = (SMQ_CONFIG.customMenus && SMQ_CONFIG.customMenus[currentLang]) || {};
+            document.getElementById('menuNamePortals').value = menus.navPortals || "";
+            document.getElementById('menuNameAbout').value = menus.navAbout || "";
+            document.getElementById('menuNameSectors').value = menus.navSectors || "";
+            document.getElementById('menuNameSteps').value = menus.navSteps || "";
+
+            switchModalTab('theme');
+            document.getElementById('configModal').classList.remove('hidden');
+        }
+
+        function closeConfigModal() {
+            document.getElementById('configModal').classList.add('hidden');
+        }
+
+        function saveConfiguration() {
+            SMQ_CONFIG.establishmentFormUrl = document.getElementById('inputEstForm').value.trim() || SMQ_CONFIG.establishmentFormUrl;
+            SMQ_CONFIG.candidateFormUrl = document.getElementById('inputCandForm').value.trim() || SMQ_CONFIG.candidateFormUrl;
+            SMQ_CONFIG.whatsappNumber = document.getElementById('inputWhatsapp').value.trim().replace(/[^0-9]/g, '') || SMQ_CONFIG.whatsappNumber;
+            SMQ_CONFIG.displayPhone = document.getElementById('inputDisplayPhone').value.trim() || ('+' + SMQ_CONFIG.whatsappNumber);
+            SMQ_CONFIG.emailAddress = document.getElementById('inputEmail').value.trim() || SMQ_CONFIG.emailAddress;
+            SMQ_CONFIG.brandName = document.getElementById('inputBrandName').value.trim() || "SMQ Manpower";
+
+            const subVal = document.getElementById('inputBrandSub').value.trim();
+            if (currentLang === 'ar') {
+                SMQ_CONFIG.brandSubAr = subVal || "مؤسسة إس إم كيو للاستقدام";
+            } else {
+                SMQ_CONFIG.brandSubEn = subVal || "SMQ Manpower & Recruitment";
+            }
+
+            SMQ_CONFIG.fontFamily = document.getElementById('inputFontFamily').value;
+            SMQ_CONFIG.primaryColor = document.getElementById('inputColorPrimary').value;
+            SMQ_CONFIG.secondaryColor = document.getElementById('inputColorSecondary').value;
+            SMQ_CONFIG.bgColor = document.getElementById('inputColorBg').value;
+            SMQ_CONFIG.fontScale = document.getElementById('inputFontScale').value;
+            SMQ_CONFIG.cardRadius = document.getElementById('inputCardRadius').value;
+
+            SMQ_CONFIG.socials = {
+                facebook: document.getElementById('inputSocialFacebook').value.trim(),
+                linkedin: document.getElementById('inputSocialLinkedin').value.trim(),
+                x: document.getElementById('inputSocialX').value.trim(),
+                instagram: document.getElementById('inputSocialInstagram').value.trim(),
+                tiktok: document.getElementById('inputSocialTiktok').value.trim()
+            };
+            SMQ_CONFIG.customSeoTitle = document.getElementById('inputSeoTitle').value.trim();
+
+            localStorage.setItem('SMQ_CONFIG_SAVED', JSON.stringify(SMQ_CONFIG));
+            applyLanguage(currentLang);
+            closeConfigModal();
+        }
+
+        function resetAllDefaults() {
+            localStorage.removeItem('SMQ_CONFIG_SAVED');
+            location.reload();
+        }
+
+        // HELPER: CONVERT DATA URL TO BLOB & EXTENSION FOR REAL FILE SAVING
+        function dataURLToFileInfo(dataUrl, baseName) {
+            const arr = dataUrl.split(',');
+            const mimeMatch = arr[0].match(/:(.*?);/);
+            const mime = mimeMatch ? mimeMatch[1] : 'image/png';
+            let ext = mime.split('/')[1] || 'png';
+            if (ext === 'jpeg') ext = 'jpg';
+            if (ext.includes('svg')) ext = 'svg';
+            const bstr = atob(arr[1]);
+            let n = bstr.length;
+            const u8arr = new Uint8Array(n);
+            while (n--) {
+                u8arr[n] = bstr.charCodeAt(n);
+            }
+            return {
+                fileName: `${baseName}.${ext}`,
+                blob: new Blob([u8arr], { type: mime })
+            };
+        }
+
+        // 12. EXPORT COMPLETE WEBSITE PACKAGE (ZIP WITH index.html + assets/logo & assets/hero-bg)
+        async function downloadWebsitePackage() {
+            if (isVisualEditActive) {
+                toggleVisualEditMode();
+            }
+            saveConfiguration();
+
+            const clone = document.documentElement.cloneNode(true);
+            const banner = clone.querySelector('#quickEditBanner');
+            const modal = clone.querySelector('#configModal');
+            if (banner) banner.remove();
+            if (modal) modal.remove();
+
+            clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+            clone.querySelector('body').classList.remove('visual-edit-mode');
+
+            // Prepare clean config for exported HTML so images point to relative files in assets/
+            const exportedConfig = JSON.parse(JSON.stringify(SMQ_CONFIG));
+            const zip = typeof JSZip !== 'undefined' ? new JSZip() : null;
+            const assetsFolder = zip ? zip.folder('assets') : null;
+
+            // Link Logo to assets/logo.ext
+            if (SMQ_CONFIG.customLogo && SMQ_CONFIG.customLogo.startsWith('data:')) {
+                const logoFile = dataURLToFileInfo(SMQ_CONFIG.customLogo, 'logo');
+                const relLogoPath = `assets/${logoFile.fileName}`;
+                exportedConfig.customLogo = relLogoPath;
+
+                const headerLogoImg = clone.querySelector('#headerLogoContainer img');
+                const footerLogoImg = clone.querySelector('#footerLogoContainer img');
+                if (headerLogoImg) headerLogoImg.setAttribute('src', relLogoPath);
+                if (footerLogoImg) footerLogoImg.setAttribute('src', relLogoPath);
+
+                if (assetsFolder) {
+                    assetsFolder.file(logoFile.fileName, logoFile.blob);
+                }
+            }
+
+            // Link Hero Background to assets/hero-bg.ext
+            if (SMQ_CONFIG.heroBgImage && SMQ_CONFIG.heroBgImage.startsWith('data:')) {
+                const bgFile = dataURLToFileInfo(SMQ_CONFIG.heroBgImage, 'hero-bg');
+                const relBgPath = `assets/${bgFile.fileName}`;
+                exportedConfig.heroBgImage = relBgPath;
+
+                const heroSec = clone.querySelector('#heroSection');
+                if (heroSec) {
+                    heroSec.style.backgroundImage = `url('${relBgPath}')`;
+                }
+
+                if (assetsFolder) {
+                    assetsFolder.file(bgFile.fileName, bgFile.blob);
+                }
+            }
+
+            // Inject updated SMQ_CONFIG into exported script so language toggles & reloads keep relative paths
+            const scripts = clone.querySelectorAll('script');
+            scripts.forEach(s => {
+                if (s.textContent && s.textContent.includes('const SMQ_CONFIG = {')) {
+                    s.textContent = s.textContent.replace(
+                        /const SMQ_CONFIG = \{[\s\S]*?\n        \};/,
+                        `const SMQ_CONFIG = ${JSON.stringify(exportedConfig, null, 4)};`
+                    );
+                }
+            });
+
+            const htmlContent = "<!DOCTYPE html>\n" + clone.outerHTML;
+
+            if (zip) {
+                zip.file('index.html', htmlContent);
+                const zipBlob = await zip.generateAsync({ type: 'blob' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(zipBlob);
+                link.download = 'SMQ-Manpower-Website.zip';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'index.html';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        function hideAdminBanner() {
+            const banner = document.getElementById('quickEditBanner');
+            if (banner) banner.style.display = 'none';
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        // Scroll Progress & Back-to-Top Visibility
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progressBar = document.getElementById('scrollProgress');
+            if (progressBar && height > 0) {
+                progressBar.style.width = ((winScroll / height) * 100) + '%';
+            }
+            const topBtn = document.getElementById('backToTopBtn');
+            if (topBtn) {
+                if (winScroll > 350) {
+                    topBtn.classList.remove('hidden');
+                    topBtn.classList.add('flex');
+                } else {
+                    topBtn.classList.add('hidden');
+                    topBtn.classList.remove('flex');
+                }
+            }
+        });
+
+        // 13. INITIALIZE ON PAGE LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            initDarkMode();
+
+            const saved = localStorage.getItem('SMQ_CONFIG_SAVED');
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    Object.assign(SMQ_CONFIG, parsed);
+                } catch (e) {}
+            }
+
+            const yearEl = document.getElementById('currentYear');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            applyLanguage(currentLang);
+        });
+    </script>
+
+</body></html>
